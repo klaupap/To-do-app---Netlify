@@ -6,7 +6,7 @@ export const useTaskStore = defineStore("tasks", {
     tasks: null,
     errors: null,
   }),
-  
+
   actions: {
     async fetchTasks() {
       const { data: tasks } = await supabase
@@ -18,10 +18,10 @@ export const useTaskStore = defineStore("tasks", {
     //async createTask
 
     async createTask(title, complete, user_id) {
-      console.log(user_id)
+      console.log(user_id, title, complete);
       const { error } = await supabase
         .from("tasks")
-        .insert({ title: title, is_complete: complete, user_id: user_id });
+        .insert([{ title: title, is_complete: complete, user_id: user_id }]);
     },
 
     //async deleteTask

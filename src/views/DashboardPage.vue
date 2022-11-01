@@ -17,7 +17,7 @@
                   placeholder="Buy some ice-cream"
                   type="text"
                   id="inputText"
-                  v-model="newTodo"
+                  v-model="title"
                   aria-describedby="basic-addon2"
                 />
                 <div class="input-group-append">
@@ -34,7 +34,7 @@
           <div class="">
             <ul style="list-style: none" class="list-group list-group-flush">
               <li v-for="task in tasks" :key="task.title" class="list-group-item">
-                <h3>{{ task.title }}</h3>
+                <h4>{{ task.title }}</h4>
                 <input
                   @change="toggleCompleted(task)"
                   class="form-check-input me-3"
@@ -42,16 +42,13 @@
                   v-model="task.is_complete"
                   id="firstCheckbox"
                 />
+
                 <div
-                  class="list-buttons d-flex align-items-center flex-row-reverse"
-                >
-                  <button
-                    class="btn mb-4 tick p-2"
-                    @click="deleteTask(task.id)"
-                  >
-                    <i class="bi bi-check-circle-fill"></i>
-                  </button>
-                </div>
+                    class="btn mb-4 trash p-2"
+                    @click="deleteTask(task)"
+                    >
+                    <i class="bi bi-trash3-fill"></i>
+              </div>
               </li>
             </ul>
           </div>
@@ -88,27 +85,29 @@ const createTask = async () => {
   await taskStore.fetchTasks();
 };
 
-
-
-
-/* const deleteTask
-
-const deleteTask = async (task) => {
-  await taskStore.deleteTask(task.id);
-  loadTasks();
-};*/
-
-// const toggleCompleted
-
-
-
-
-/*const loadTasks = async () => {
+const loadTasks = async () => {
   if (user) {
     await taskStore.fetchTasks();
   }
 };
-loadTasks();*/
+loadTasks();
+
+//deleteTask
+
+const deleteTask = async (task) => {
+  await taskStore.deleteTask(task.id);
+  loadTasks();
+};
+
+
+// const toggleCompleted: PENDIENTE SOLUCIONAR
+
+const toggleCompleted = (task) => {
+  task.complete = !task.complete;
+};
+
+
+
 
 
 </script>
@@ -151,19 +150,12 @@ html {
   font-size: 20px;
 }
 
-.tick {
-  color: grey;
-  font-size: 20px;
-}
+
 .trash:hover {
   color: red;
   transform: scale(1.1);
 }
 
-.tick:hover {
-  color: greenyellow;
-  transform: scale(1.1);
-}
 
 .btn-primary {
   background-color: #82c0cc;
