@@ -33,22 +33,40 @@
 
           <div class="">
             <ul style="list-style: none" class="list-group list-group-flush">
-              <li v-for="task in tasks" :key="task.title" class="list-group-item">
-                <h4>{{ task.title }}</h4>
+              <li
+                v-for="task in tasks"
+                :key="task.id"
+                class="list-group-item"
+                :class="{ completed: task.is_complete }"
+              >
+              <!--  
                 <input
-                  @change="toggleCompleted(task)"
+                  @change="toggleCompleted(task.id)"
                   class="form-check-input me-3"
                   type="checkbox"
                   v-model="task.is_complete"
                   id="firstCheckbox"
-                />
+                />-->
 
-                <div
-                    class="btn mb-4 trash p-2"
-                    @click="deleteTask(task)"
-                    >
-                    <i class="bi bi-trash3-fill"></i>
-              </div>
+                <div class="form-check form-switch">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    v-model="task.is_complete"
+                    id="flexSwitchCheckDefault"
+                    @change="toggleCompleted(task)"
+
+                  />
+                  <label
+                    class="form-check-label"
+                    for="flexSwitchCheckDefault"
+                  ></label>
+                </div>
+                <h4>{{ task.title }}</h4>
+
+                <div class="btn mb-4 trash p-2" @click="deleteTask(task)">
+                  <i class="bi bi-trash3-fill"></i>
+                </div>
               </li>
             </ul>
           </div>
@@ -76,8 +94,6 @@ const { tasks } = storeToRefs(taskStore);
 const title = ref("");
 const complete = ref(false);
 
-
-
 const createTask = async () => {
   await taskStore.createTask(title.value, complete.value, user._object.user.id);
   title.value = "";
@@ -99,17 +115,13 @@ const deleteTask = async (task) => {
   loadTasks();
 };
 
-
 // const toggleCompleted: PENDIENTE SOLUCIONAR
 
-const toggleCompleted = (task) => {
-  task.complete = !task.complete;
+const toggleCompleted = async (task) => {
+  await taskStore.toggleCompleted(task.id, task.is_complete);
+  console.log("toggleCompleted");
+  await taskStore.fetchTasks();
 };
-
-
-
-
-
 </script>
 <style scoped>
 html {
@@ -150,12 +162,10 @@ html {
   font-size: 20px;
 }
 
-
 .trash:hover {
   color: red;
   transform: scale(1.1);
 }
-
 
 .btn-primary {
   background-color: #82c0cc;
@@ -169,5 +179,10 @@ h4 {
 .btn-block {
   text-align: center;
   align-items: center;
+}
+
+.completed {
+  text-decoration: line-through;
+  color: grey;
 }
 </style>
