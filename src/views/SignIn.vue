@@ -133,4 +133,11 @@ const login = async () => {
  border:none;
 
 }
+
+.btn:hover {
+  background-color: #53b0c2;
+ 
+
+ }
+
 </style>

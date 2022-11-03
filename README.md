@@ -1,18 +1,18 @@
-# Doing your best - To Do App :coffee:
+# :coffee: Doing your best - To Do App 
 
 Final project from IronHack Bootcamp.
 
 A simple To-do app with Vue.js that allows users to create an account, record tasks, edit them and mark them as complete. 
 
 
-## Deployment :rocket:
+## :rocket: Deployment 
 
 Deployment with Netlify
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/f5b53bcc-e572-4046-9552-505979315b37/deploy-status)](https://app.netlify.com/sites/doingyourbest/deploys)
 
 
-## Built With :wrench:
+## :wrench: Built With 
 
 * Client: Vue.js, Vite (dev server)
 * Router: Vue Router
@@ -26,7 +26,7 @@ Deployment with Netlify
 
 [VSCode](https://code.visualstudio.com/)
 
-## Project requirements :paperclip:
+## :paperclip: Project requirements 
 
 * Have a repo on GitHub
 * Commit your work at least once a day during the project development time
@@ -40,7 +40,7 @@ Deployment with Netlify
 * You should document the application’s features, configuration and technical specifications within a README file
 
 
-## Deliverables :open_file_folder:
+## :open_file_folder: Deliverables 
 
 The functionality should include:
 
@@ -52,11 +52,11 @@ The functionality should include:
 * An ability to delete existing tasks
 * A store and a database that your app can call data from
 
-## Customize configuration
+## :diamonds: Customize configuration
 
 See [Vite Configuration Reference](https://vitejs.dev/config/).
 
-## Project Setup
+## :diamonds: Project Setup
 
 ```sh
 npm install
@@ -80,7 +80,7 @@ npm run build
 npm run lint
 ```
 
-## License :bookmark:
+## :bookmark: License 
 
 MIT License
 

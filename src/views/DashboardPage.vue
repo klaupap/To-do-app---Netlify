@@ -8,13 +8,13 @@
               class="my-5 display-5 fw-bold ls-tight animate__animated animate__bounce"
               style="color: hsl(218, 81%, 75%)"
             >
-              What's on your todo list?
+            ☕ What's on your todo list?
             </h1>
             <div class="row">
               <div class="col input-group mb-3">
                 <input
                   class="form-control"
-                  placeholder="Buy some ice-cream"
+                  placeholder="Buy some cookies 🍪"
                   type="text"
                   id="inputText"
                   v-model="title"
@@ -27,48 +27,36 @@
             </div>
           </form>
 
-          <div
-            class="row justify-content-center align-items-center text-center"
-          ></div>
 
-          <div class="">
-            <ul style="list-style: none" class="list-group list-group-flush">
+          <div class="d-flex">
+            <ul style="list-style: none" class="list-group">
               <li
                 v-for="task in tasks"
                 :key="task.id"
-                class="list-group-item"
+                class="list-group-item d-flex justify-content-between align-items-center"
                 :class="{ completed: task.is_complete }"
               >
-              <!--  
-                <input
-                  @change="toggleCompleted(task.id)"
-                  class="form-check-input me-3"
-                  type="checkbox"
-                  v-model="task.is_complete"
-                  id="firstCheckbox"
-                />-->
-
-                <div class="form-check form-switch">
+                <div class="form-check form-switch ">
                   <input
                     class="form-check-input"
                     type="checkbox"
                     v-model="task.is_complete"
                     id="flexSwitchCheckDefault"
                     @change="toggleCompleted(task)"
-
                   />
                   <label
-                    class="form-check-label"
+                    class="form-check-label me-5"
                     for="flexSwitchCheckDefault"
                   ></label>
                 </div>
-                <h4>{{ task.title }}</h4>
-
-                <div class="btn mb-4 trash p-2" @click="deleteTask(task)">
-                  <i class="bi bi-trash3-fill"></i>
+                <p class="mx-5 align-items-start ">{{ task.title }}</p>
+                <div class="btn ms-5 trash p-2 align-self-baseline" @click="deleteTask(task)">
+                  <i class="bi bi-trash3-fill align-self-baseline"></i>
                 </div>
               </li>
+
             </ul>
+
           </div>
         </div>
       </div>
@@ -115,7 +103,7 @@ const deleteTask = async (task) => {
   loadTasks();
 };
 
-// const toggleCompleted: PENDIENTE SOLUCIONAR
+// const toggleCompleted
 
 const toggleCompleted = async (task) => {
   await taskStore.toggleCompleted(task.title, task.id, task.is_complete);
@@ -143,19 +131,6 @@ html {
   background-size: cover;
   height: 100vh;
 }
-.done {
-  text-decoration: line-through;
-  color: grey;
-}
-.pencil:hover {
-  color: green;
-  transform: scale(1.1);
-}
-
-.pencil {
-  color: grey;
-  font-size: 20px;
-}
 
 .trash {
   color: grey;
@@ -172,17 +147,23 @@ html {
   border: none;
 }
 
-h4 {
+p {
   color: 514D67;
 }
 
-.btn-block {
-  text-align: center;
-  align-items: center;
-}
+.btn-primary:hover {
+  background-color: #53b0c2;
+ }
 
 .completed {
   text-decoration: line-through;
   color: grey;
+  background-color: rgb(247, 247, 247);
 }
+
+.list-group-item {
+
+}
+
+
 </style>

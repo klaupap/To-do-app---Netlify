@@ -154,10 +154,13 @@ const signup = async () => {
   text-decoration: none;
   color: #82C0CC;
 }
-
 .btn{
  background-color: #82C0CC;
  border:none;
-
 }
+
+.btn:hover {
+  background-color: #53b0c2;
+ }
+
 </style>

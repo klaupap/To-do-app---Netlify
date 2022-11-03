@@ -1,6 +1,9 @@
 <template>
   <section class="background-radial-gradient overflow-hidden">
     <div class="container justify-content-center align-items-center px-4 py-4 px-md-5 text-center my-5">
+      <div class= "row">
+        <div class= "col  d-flex justify-content-center">
+          <div class= "text-center">
       <h1
         class="my-5 display-5 fw-bold ls-tight"
         style="color: hsl(218, 81%, 95%)"
@@ -13,17 +16,19 @@
         <br />
         Stay focus.
       </p>
-      <p>
-        <router-link to="/signin" class="btn btn-primary btn-block mb-4">
+      <div class="row justify-content-evenly">
+        <router-link to="/signin" class="btn btn-primary btn-block mb-4 p-2 col-3">
           Sign in
         </router-link>
-        <router-link to="/signup" class="btn btn-primary btn-block mb-4">
+        <router-link to="/signup" class="btn btn-primary btn-block mb-4 p-2 col-3">
           Sign up
         </router-link>
-      </p>
+      </div>
     </div>
+  </div>
+    </div>
+  </div>
   </section>
-  <!-- Section: Design Block -->
 </template>
 
 <script></script>
@@ -41,5 +46,13 @@
  background-color: #82C0CC;
  border:none;
 
+
 }
+ .btn:hover {
+  background-color: #53b0c2;
+ 
+
+ }
+
+
 </style>

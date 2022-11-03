@@ -68,7 +68,6 @@ const logout = async () => {
 
 <style scoped>
 .nav-item:hover {
-  color: yellow;
   transform: scale(1.1);
 }
 </style>
