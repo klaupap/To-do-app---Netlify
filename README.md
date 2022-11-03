@@ -1,59 +1,56 @@
-# Doing your best - To Do App
+# Doing your best - To Do App :coffee:
 
 Final project from IronHack Bootcamp.
 
 A simple To-do app with Vue.js that allows users to create an account, record tasks, edit them and mark them as complete. 
 
 
-### Deployment
+## Deployment :rocket:
 
 Deployment with Netlify
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/f5b53bcc-e572-4046-9552-505979315b37/deploy-status)](https://app.netlify.com/sites/leafy-cocada-a28993/deploys)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/f5b53bcc-e572-4046-9552-505979315b37/deploy-status)](https://app.netlify.com/sites/doingyourbest/deploys)
 
 
-### Built With
+## Built With :wrench:
 
-Client: Vue.js, Vite (dev server)
-Router: Vue Router
-Store: Pinia and Pinia Persist for persistent login
-Database as a service: Supabase
-UI library: Bootstrap
-We’ll also be using Vite as a build tool to compile our code and provide a development server while we work.
+* Client: Vue.js, Vite (dev server)
+* Router: Vue Router
+* Store: Pinia and Pinia Persist for persistent login
+* Database as a service: Supabase
+* UI library: Bootstrap
+* Build tool to compile our code and provide a development server while we work: Vite
 
-
-This template should help get you started developing with Vue 3 in Vite.
 
 ## Recommended IDE Setup
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+[VSCode](https://code.visualstudio.com/)
+
+## Project requirements :paperclip:
+
+* Have a repo on GitHub
+* Commit your work at least once a day during the project development time
+* Your app should be rendered in a browser
+* Your app should be deployed online using a cloud service such as Netlify
+* Stick with KISS (Keep It Simple, Stupid) and DRY (Don’t Repeat Yourself) principles.
+* Your app should be styled using CSS
+* Your app should be fully integrated with a Supabase database using all CRUD operations
+* You should use Vue’s Pinia to fully implement status handling
+* You should handle any asynchronous operations using Promises or Async/await
+* You should document the application’s features, configuration and technical specifications within a README file
 
 
-### Project requirements
-
-Have a repo on GitHub
-Commit your work at least once a day during the project development time
-Your app should be rendered in a browser
-Your app should be deployed online using a cloud service such as Netlify
-Stick with KISS (Keep It Simple, Stupid) and DRY (Don’t Repeat Yourself) principles.
-Your app should be styled using CSS
-Your app should be fully integrated with a Supabase database using all CRUD operations
-You should use Vue’s Pinia to fully implement status handling
-You should handle any asynchronous operations using Promises or Async/await
-You should document the application’s features, configuration and technical specifications within a README file
-
-
-### Deliverables
+## Deliverables :open_file_folder:
 
 The functionality should include:
 
-Authentication (sign up, sign in, sign out)
-A front-end that displays the user’s personal to-do list
-An ability to add new tasks
-An ability to edit existing tasks
-An ability to mark tasks as complete/incomplete
-An ability to delete existing tasks
-A store and a database that your app can call data from
+* Authentication (sign up, sign in, sign out)
+* A front-end that displays the user’s personal to-do list
+* An ability to add new tasks
+* An ability to edit existing tasks
+* An ability to mark tasks as complete/incomplete
+* An ability to delete existing tasks
+* A store and a database that your app can call data from
 
 ## Customize configuration
 
@@ -83,7 +80,7 @@ npm run build
 npm run lint
 ```
 
-### License
+## License :bookmark:
 
 MIT License
 
