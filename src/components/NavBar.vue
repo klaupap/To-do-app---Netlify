@@ -25,7 +25,7 @@
       <div class="collapse navbar-collapse" id="navbarNavDropdown">
         <ul class="navbar-nav ms-auto">
           <li class="nav-item">
-            <router-link to="/dashboard" class="nav-link mx-2"
+            <router-link v-if="user" to="/dashboard" class="nav-link mx-2"
               >My tasks
             </router-link>
           </li>
