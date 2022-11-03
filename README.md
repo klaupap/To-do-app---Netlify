@@ -1,7 +1,9 @@
-# my-to-do-project
+# Doing your best - To Do App
+
+A simple To-do app with Vue.js that allows users to create an account, record tasks, edit them and mark them as complete. 
 
 
-
+[![Netlify Status](https://api.netlify.com/api/v1/badges/f5b53bcc-e572-4046-9552-505979315b37/deploy-status)](https://app.netlify.com/sites/leafy-cocada-a28993/deploys)
 -----------------
 
 This template should help get you started developing with Vue 3 in Vite.

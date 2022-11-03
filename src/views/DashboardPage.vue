@@ -118,7 +118,7 @@ const deleteTask = async (task) => {
 // const toggleCompleted: PENDIENTE SOLUCIONAR
 
 const toggleCompleted = async (task) => {
-  await taskStore.toggleCompleted(task.id, task.is_complete);
+  await taskStore.toggleCompleted(task.title, task.id, task.is_complete);
   console.log("toggleCompleted");
   await taskStore.fetchTasks();
 };
